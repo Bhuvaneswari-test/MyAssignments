@@ -43,30 +43,15 @@ public class createlead {
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf");
 
 		// Enter first name
-		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Vineeth");
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Bhuvana");
 
 		// Enter the last name
-		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("Rajendran");
+		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("Neelakandan");
 
 		// Step1: Find the dropdown element
 		WebElement sourceElement = driver.findElement(By.id("createLeadForm_dataSourceId"));
 
-		// Step2: Select-Create an Object
-		Select dropdown = new Select(sourceElement);
-
-		// Step3: Use the method to Select - 3 Methods
-		// dropdown.selectByIndex(4);
-		// dropdown.selectByVisibleText("Conference");
-		dropdown.selectByValue("LEAD_DIRECTMAIL");
-		
-		//find dropdown element
-		WebElement Element = driver.findElement(By.id("createLeadForm_industryEnumId"));
-		//create object
-		Select dropdown1 = new Select(Element);
-		//select using text
-		dropdown1.selectByContainsVisibleText("General Services");
-
-		// Click on the Create lead button
+				// Click on the Create lead button
 		driver.findElement(By.name("submitButton")).click();
 		
 		
